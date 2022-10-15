@@ -45,8 +45,5 @@ public class OrderPage extends BasePage {
     @FindBy(xpath = "//button[.='Process Order']")
     public WebElement processOrderButton;
 
-    @FindBy(xpath = "//*[text() = 'MoneyCogFamilybeaScreenable']")
-    public WebElement productSelect;
-
 
 }

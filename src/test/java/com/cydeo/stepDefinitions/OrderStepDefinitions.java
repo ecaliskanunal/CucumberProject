@@ -10,9 +10,7 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -47,7 +45,13 @@ public class OrderStepDefinitions {
 
         //back_space will clear the existing input int the box
         //orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
-        orderPage.inputQuantity.sendKeys(string);
+
+
+        JavascriptExecutor jse = ((JavascriptExecutor)Driver.getDriver());
+        jse.executeScript("arguments[0].value='"+string+"';", orderPage.inputQuantity);
+
+
+        //orderPage.inputQuantity.sendKeys(string);
     }
 
     @When("user enters name {string}")
