@@ -21,8 +21,6 @@ import org.testng.Assert;
 import javax.xml.crypto.dom.DOMCryptoContext;
 import java.util.List;
 
-import static com.cydeo.utilities.BrowserUtils.getShadowRootElement;
-
 public class OrderStepDefinitions {
 
     WebTablesPage webTablesPage = new WebTablesPage();
