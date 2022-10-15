@@ -46,12 +46,10 @@ public class OrderStepDefinitions {
         //back_space will clear the existing input int the box
         //orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
 
-
         JavascriptExecutor jse = ((JavascriptExecutor)Driver.getDriver());
-        jse.executeScript("arguments[0].value='"+string+"';", orderPage.inputQuantity);
-
-
-        //orderPage.inputQuantity.sendKeys(string);
+        WebElement element = (WebElement) jse.executeScript("return document.querySelector(\"#root > section > div > form > div > div.columns > div:nth-child(1) > div:nth-child(3) > div > input\")");
+        String js =  "arguments[0].setAttribute('value','" +string + "')";
+        jse.executeScript(js,element);
     }
 
     @When("user enters name {string}")

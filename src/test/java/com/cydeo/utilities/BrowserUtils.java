@@ -527,5 +527,14 @@ public class BrowserUtils {
         new WebDriverWait(Driver.getDriver(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
+    public static WebElement getShadowRoot(WebDriver driver, WebElement shadowHost) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        return (WebElement) js.executeScript("return arguments[0].shadowRoot", shadowHost);
+    }
+
+    public static WebElement getShadowElement(WebElement shadowHost, String cssOfShadowElement) {
+        WebElement shadowRoot = getShadowRoot(Driver.getDriver(), shadowHost);
+        return shadowRoot.findElement(By.cssSelector(cssOfShadowElement));
+    }
 
 }
