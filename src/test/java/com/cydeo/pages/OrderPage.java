@@ -33,7 +33,7 @@ public class OrderPage extends BasePage {
     @FindBy(xpath = "//input[@name='zip']")
     public WebElement inputZip;
 
-    @FindBy(name = "card") //We cannot use the text of input tag because it is not a paired tag
+    @FindBy(xpath = "//form/div/div[1]/div[3]/div[1]/div//input") //We cannot use the text of input tag because it is not a paired tag
     public List<WebElement> cardType;
 
     @FindBy(xpath = "//input[@name='cardNo']")
