@@ -10,6 +10,8 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -44,7 +46,7 @@ public class OrderStepDefinitions {
     public void user_enters_quantity(String string) {
 
         //back_space will clear the existing input int the box
-        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
+        //orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
         orderPage.inputQuantity.sendKeys(string);
     }
 

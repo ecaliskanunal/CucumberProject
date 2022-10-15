@@ -11,10 +11,10 @@ public class WebTablesPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (name="username")
+    @FindBy (xpath = "//form/div/input[@name='username']")
     public WebElement inputUsername;
 
-    @FindBy (xpath = "//input[@type='password']")
+    @FindBy (xpath = "//input[@name='password']")
     public WebElement inputPassword;
 
     @FindBy (xpath = "//button[.='Login']")

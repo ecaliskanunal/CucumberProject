@@ -3,7 +3,7 @@ Feature: Web table order feature
   Scenario: User should be able to place order see in the web table
     Given user is on the order page
     When user selects product type "Familybea"
-    And user enters quantity "2"
+    #And user enters quantity "2"
     And user enters name "Sherlock Holmes"
     And user enters street "221B Baker Street"
     And user enters city "London"
@@ -19,7 +19,7 @@ Feature: Web table order feature
   Scenario Outline: User should be able to place order in the web table
     Given user is on the order page
     When user selects product type "<productType>"
-    And user enters quantity "<quantity>"
+    #And user enters quantity "<quantity>"
     And user enters name "<customerName>"
     And user enters street "<street>"
     And user enters city "<city>"
