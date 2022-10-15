@@ -26,7 +26,7 @@ public class BrowserUtils {
         try {
             Thread.sleep(second);
         } catch (InterruptedException e) {
-
+            e.printStackTrace();
         }
 
     }
@@ -71,7 +71,7 @@ public class BrowserUtils {
     /**
      * This method will accept a String as expected value and verify if the current URL contains expected value
      *
-     * @param expectedInTitle
+     * @param expectedInTitle is passed
      */
     public static void verifyURLContains(String expectedInTitle) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInTitle));
@@ -165,7 +165,7 @@ public class BrowserUtils {
     /**
      * Switches to new window by the exact title. Returns to original window if target title not found
      *
-     * @param targetTitle
+     * @param targetTitle is passed
      */
     public static void switchToWindow(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
@@ -205,7 +205,7 @@ public class BrowserUtils {
     /**
      * Extracts text from list of elements matching the provided locator into new List<String>
      *
-     * @param locator
+     * @param locator is passed
      * @return list of strings
      */
     public static List<String> getElementsText(By locator) {
