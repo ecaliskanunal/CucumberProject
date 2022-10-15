@@ -10,19 +10,13 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.poi.sl.usermodel.Shadow;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
-import javax.xml.crypto.dom.DOMCryptoContext;
 import java.util.List;
 
 public class OrderStepDefinitions {
-
     WebTablesPage webTablesPage = new WebTablesPage();
     BasePage basePage = new BasePage();
     OrderPage orderPage = new OrderPage();
