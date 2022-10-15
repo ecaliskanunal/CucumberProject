@@ -45,5 +45,8 @@ public class OrderPage extends BasePage {
     @FindBy(xpath = "//button[.='Process Order']")
     public WebElement processOrderButton;
 
+    @FindBy(name = "quantity")
+    public WebElement quantity;
+
 
 }

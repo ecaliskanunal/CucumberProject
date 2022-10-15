@@ -10,12 +10,18 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.poi.sl.usermodel.Shadow;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import javax.xml.crypto.dom.DOMCryptoContext;
 import java.util.List;
+
+import static com.cydeo.utilities.BrowserUtils.getShadowRootElement;
 
 public class OrderStepDefinitions {
 
@@ -44,12 +50,8 @@ public class OrderStepDefinitions {
     public void user_enters_quantity(String string) {
 
         //back_space will clear the existing input int the box
-        //orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
-
-        JavascriptExecutor jse = ((JavascriptExecutor)Driver.getDriver());
-        WebElement element = (WebElement) jse.executeScript("return document.querySelector(\"#root > section > div > form > div > div.columns > div:nth-child(1) > div:nth-child(3) > div > input\")");
-        String js =  "arguments[0].setAttribute('value','" +string + "')";
-        jse.executeScript(js,element);
+        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
+        orderPage.quantity.sendKeys(string);
     }
 
     @When("user enters name {string}")
