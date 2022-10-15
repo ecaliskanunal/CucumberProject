@@ -21,25 +21,25 @@ public class OrderPage extends BasePage {
     @FindBy(xpath = "//div[2]/div[1]/div/input")
     public WebElement inputName;
 
-    @FindBy(name = "street")
+    @FindBy(xpath = "//input[@name='street']")
     public WebElement inputStreet;
 
-    @FindBy(name = "city")
+    @FindBy(xpath = "//input[@name='city']")
     public WebElement inputCity;
 
-    @FindBy(name = "state")
+    @FindBy(xpath = "//input[@name='state']")
     public WebElement inputState;
 
-    @FindBy(name = "zip")
+    @FindBy(xpath = "//input[@name='zip']")
     public WebElement inputZip;
 
     @FindBy(name = "card") //We cannot use the text of input tag because it is not a paired tag
     public List<WebElement> cardType;
 
-    @FindBy(name = "cardNo")
+    @FindBy(xpath = "//input[@name='cardNo']")
     public WebElement inputCardNo;
 
-    @FindBy(name = "cardExp")
+    @FindBy(xpath = "//input[@name='cardExp']")
     public WebElement inputCardExp;
 
     @FindBy(xpath = "//button[.='Process Order']")
