@@ -14,7 +14,7 @@ Feature: User should be able to login using correct credentials
     When user enters username "username" and password "password", and logins
     Then user should see url contains orders
 
-
+  @loginWithCre
   Scenario: User should be able to login with right credentials
     When user enters below credentials
       | username | Test   |

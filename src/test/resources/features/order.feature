@@ -16,7 +16,7 @@ Feature: Web table order feature
 #    Then user should see "Sherlock Holmes" in the first row of the web table
 
    Scenario Outline: User should be able to place order in the web table
-    Given user is on the order page
+#    Given user is on the order page
 #    When user selects product type "<productType>"
 #    #And user enters quantity "<quantity>"
 #    And user enters name "<customerName>"
