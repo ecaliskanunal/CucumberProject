@@ -12,7 +12,7 @@ public class OrderPage extends BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//form//div/select")
+    @FindBy(xpath = "//select[@name='product']")
     public WebElement productDropdown;
 
     @FindBy(xpath = "//*[@id=\"root\"]/section/div/form/div/div[1]/div[1]/div[2]/div/input")

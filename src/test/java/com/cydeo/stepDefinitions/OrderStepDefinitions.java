@@ -10,6 +10,7 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,8 +31,8 @@ public class OrderStepDefinitions {
         webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
         Actions actions = new Actions(Driver.getDriver());
-        actions.click(basePage.clickBeforeAll);
-        actions.click(basePage.order);
+        //actions.click(basePage.clickBeforeAll);
+        actions.doubleClick(basePage.order);
 
 
         //clicking the order link
