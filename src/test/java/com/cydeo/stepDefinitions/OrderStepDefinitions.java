@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import java.util.List;
@@ -28,9 +29,13 @@ public class OrderStepDefinitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("webTablesURL"));
         webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
-        basePage.clickBeforeAll.click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.click(basePage.clickBeforeAll);
+        actions.click(basePage.order);
+
+
         //clicking the order link
-        basePage.order.click();
+        //basePage.order.click();
     }
 
     @When("user selects product type {string}")
