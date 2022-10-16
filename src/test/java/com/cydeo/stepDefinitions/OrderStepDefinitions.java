@@ -31,80 +31,80 @@ public class OrderStepDefinitions {
         //clicking the order link
         basePage.order.click();
     }
+
+    @When("user selects product type {string}")
+    public void user_selects_product_type(String string) {
+        Select select = new Select(orderPage.productDropdown);
+        select.selectByVisibleText(string);
+    }
+
+    @When("user enters quantity {string}")
+    public void user_enters_quantity(String string) {
+
+        //back_space will clear the existing input int the box
+        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
+        orderPage.quantity.sendKeys(string);
+    }
+
+    @When("user enters name {string}")
+    public void user_enters_name(String string) {
+        orderPage.inputName.sendKeys(string);
+    }
+
+    @When("user enters street {string}")
+    public void user_enters_street(String string) {
+        orderPage.inputStreet.sendKeys(string);
+    }
+
+    @When("user enters city {string}")
+    public void user_enters_city(String string) {
+        orderPage.inputCity.sendKeys(string);
+    }
+
+    @When("user enters state {string}")
+    public void user_enters_state(String string) {
+        orderPage.inputState.sendKeys(string);
+    }
+
+    @When("user enters zipcode {string}")
+    public void user_enters_zipcode(String string) {
+        orderPage.inputZip.sendKeys(string);
+    }
+
+    @When("user selects card {string}")
+    public void user_selects_card(String expectedCardType) {
+        List<WebElement> cardTypes = orderPage.cardType; //Get all the types of cards
 //
-//    @When("user selects product type {string}")
-//    public void user_selects_product_type(String string) {
-//        Select select = new Select(orderPage.productDropdown);
-//        select.selectByVisibleText(string);
-//    }
-//
-//    @When("user enters quantity {string}")
-//    public void user_enters_quantity(String string) {
-//
-//        //back_space will clear the existing input int the box
-//        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
-//        orderPage.quantity.sendKeys(string);
-//    }
-//
-//    @When("user enters name {string}")
-//    public void user_enters_name(String string) {
-//        orderPage.inputName.sendKeys(string);
-//    }
-//
-//    @When("user enters street {string}")
-//    public void user_enters_street(String string) {
-//        orderPage.inputStreet.sendKeys(string);
-//    }
-//
-//    @When("user enters city {string}")
-//    public void user_enters_city(String string) {
-//        orderPage.inputCity.sendKeys(string);
-//    }
-//
-//    @When("user enters state {string}")
-//    public void user_enters_state(String string) {
-//        orderPage.inputState.sendKeys(string);
-//    }
-//
-//    @When("user enters zipcode {string}")
-//    public void user_enters_zipcode(String string) {
-//        orderPage.inputZip.sendKeys(string);
-//    }
-//
-//    @When("user selects card {string}")
-//    public void user_selects_card(String expectedCardType) {
-//        List<WebElement> cardTypes = orderPage.cardType; //Get all the types of cards
-////
-////        for (WebElement cardType : cardTypes) {
-////            if (cardType.getAttribute("value").equalsIgnoreCase(expectedCardType)){
-////                cardType.click();
-////            }
-////        }
-//
-//        //OR
-//
-//        BrowserUtils.clickRadioButton(cardTypes, expectedCardType);
-//
-//    }
-//
-//    @When("user enters card number {string}")
-//    public void user_enters_card_number(String string) {
-//        orderPage.inputCardNo.sendKeys(string);
-//    }
-//
-//    @When("user enters expiration date {string}")
-//    public void user_enters_expiration_date(String string) {
-//        orderPage.inputCardExp.sendKeys(string);
-//    }
-//
-//    @When("user clicks process order button")
-//    public void user_clicks_process_order_button() {
-//        orderPage.processOrderButton.click();
-//    }
-//
-//    @Then("user should see {string} in the first row of the web table")
-//    public void user_should_see_in_the_first_row_of_the_web_table(String expectedCustomerName) {
-//        String actualCustomerName = viewAllOrdersPage.newCustomerCell.getText();
-//        Assert.assertEquals(expectedCustomerName, actualCustomerName);
-//    }
+//        for (WebElement cardType : cardTypes) {
+//            if (cardType.getAttribute("value").equalsIgnoreCase(expectedCardType)){
+//                cardType.click();
+//            }
+//        }
+
+        //OR
+
+        BrowserUtils.clickRadioButton(cardTypes, expectedCardType);
+
+    }
+
+    @When("user enters card number {string}")
+    public void user_enters_card_number(String string) {
+        orderPage.inputCardNo.sendKeys(string);
+    }
+
+    @When("user enters expiration date {string}")
+    public void user_enters_expiration_date(String string) {
+        orderPage.inputCardExp.sendKeys(string);
+    }
+
+    @When("user clicks process order button")
+    public void user_clicks_process_order_button() {
+        orderPage.processOrderButton.click();
+    }
+
+    @Then("user should see {string} in the first row of the web table")
+    public void user_should_see_in_the_first_row_of_the_web_table(String expectedCustomerName) {
+        String actualCustomerName = viewAllOrdersPage.newCustomerCell.getText();
+        Assert.assertEquals(expectedCustomerName, actualCustomerName);
+    }
 }

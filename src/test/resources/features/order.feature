@@ -2,33 +2,33 @@ Feature: Web table order feature
 
   Scenario: User should be able to place order see in the web table
     Given user is on the order page
-    When user selects product type "Familybea"
+#    When user selects product type "Familybea"
     #And user enters quantity "2"
-    And user enters name "Sherlock Holmes"
-    And user enters street "221B Baker Street"
-    And user enters city "London"
-    And user enters state "England"
-    And user enters zipcode "50505"
-    And user selects card "MasterCard"
-    And user enters card number "111222333444"
-    And user enters expiration date "12/23"
-    And user clicks process order button
-    Then user should see "Sherlock Holmes" in the first row of the web table
+#    And user enters name "Sherlock Holmes"
+#    And user enters street "221B Baker Street"
+#    And user enters city "London"
+#    And user enters state "England"
+#    And user enters zipcode "50505"
+#    And user selects card "MasterCard"
+#    And user enters card number "111222333444"
+#    And user enters expiration date "12/23"
+#    And user clicks process order button
+#    Then user should see "Sherlock Holmes" in the first row of the web table
 
    Scenario Outline: User should be able to place order in the web table
     Given user is on the order page
-    When user selects product type "<productType>"
-    #And user enters quantity "<quantity>"
-    And user enters name "<customerName>"
-    And user enters street "<street>"
-    And user enters city "<city>"
-    And user enters state "<state>"
-    And user enters zipcode "<zip>"
-    And user selects card "<cardType>"
-    And user enters card number "<cardNumber>"
-    And user enters expiration date "<cardExp>"
-    And user clicks process order button
-    Then user should see "<expectedName>" in the first row of the web table
+#    When user selects product type "<productType>"
+#    #And user enters quantity "<quantity>"
+#    And user enters name "<customerName>"
+#    And user enters street "<street>"
+#    And user enters city "<city>"
+#    And user enters state "<state>"
+#    And user enters zipcode "<zip>"
+#    And user selects card "<cardType>"
+#    And user enters card number "<cardNumber>"
+#    And user enters expiration date "<cardExp>"
+#    And user clicks process order button
+#    Then user should see "<expectedName>" in the first row of the web table
 
     @femaleScientists
     Examples: Famous female scientists
