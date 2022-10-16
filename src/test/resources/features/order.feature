@@ -15,8 +15,9 @@ Feature: Web table order feature
 #    And user clicks process order button
 #    Then user should see "Sherlock Holmes" in the first row of the web table
 
+  @loginWithCre
    Scenario Outline: User should be able to place order in the web table
-#    Given user is on the order page
+    Given user is on the order page
 #    When user selects product type "<productType>"
 #    #And user enters quantity "<quantity>"
 #    And user enters name "<customerName>"
