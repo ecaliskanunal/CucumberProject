@@ -17,7 +17,12 @@ public class BasePage {
     @FindBy (xpath = "//button[.='View all orders']")
     public WebElement viewAllOrders;
 
-    @FindBy (xpath = "//*[@id=\"root\"]/nav/div[2]/a[1]")
+
+
+    @FindBy (xpath = "//*[@id='root']/nav/div[2]")
+    public WebElement clickBeforeAll;
+
+    @FindBy (xpath = "//*[@id='root']/nav/div[2]/a[3]/button")
     public WebElement order;
 
     @FindBy (xpath = "//button[.='Logout']")

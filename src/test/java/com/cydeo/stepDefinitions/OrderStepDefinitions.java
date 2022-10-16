@@ -28,6 +28,7 @@ public class OrderStepDefinitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("webTablesURL"));
         webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
+        basePage.clickBeforeAll.click();
         //clicking the order link
         basePage.order.click();
     }
