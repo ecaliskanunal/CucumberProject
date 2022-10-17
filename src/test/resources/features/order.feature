@@ -20,16 +20,16 @@ Feature: Web table order feature
     Given user is on the order page
     When user selects product type "<productType>"
     And user enters quantity "<quantity>"
-#    And user enters name "<customerName>"
-#    And user enters street "<street>"
-#    And user enters city "<city>"
-#    And user enters state "<state>"
-#    And user enters zipcode "<zip>"
-#    And user selects card "<cardType>"
-#    And user enters card number "<cardNumber>"
-#    And user enters expiration date "<cardExp>"
-#    And user clicks process order button
-#    Then user should see "<expectedName>" in the first row of the web table
+    And user enters name "<customerName>"
+    And user enters street "<street>"
+    And user enters city "<city>"
+    And user enters state "<state>"
+    And user enters zipcode "<zip>"
+    And user selects card "<cardType>"
+    And user enters card number "<cardNumber>"
+    And user enters expiration date "<cardExp>"
+    And user clicks process order button
+    Then user should see "<expectedName>" in the first row of the web table
 
 #    @femaleScientists
 #    Examples: Famous female scientists
