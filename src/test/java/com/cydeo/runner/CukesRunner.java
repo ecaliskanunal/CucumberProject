@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
                 //"pretty",
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+                "json:target/json-cucumber-reports/cucumber.json"
         } ,
 
         features = "src/test/resources/features",
