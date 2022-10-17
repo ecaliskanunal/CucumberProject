@@ -15,7 +15,7 @@ Feature: Web table order feature
     And user clicks process order button
     Then user should see "Sherlock Holmes" in the first row of the web table
 
-
+    @wipp
    Scenario Outline: User should be able to place order in the web table
     Given user is on the order page
     When user selects product type "<productType>"
@@ -38,7 +38,7 @@ Feature: Web table order feature
 #      | Screenable  | 5        | Rosalin Franklin | Oxford Street | Oxford | England | 23455 | MasterCard       | 112233445566 | 10/27   | Rosalin Franklin |
 #      | Familybea   | 3        | List Meitner     | Camb Street   | Camb   | England | 33337 | American Express | 112233445566 | 12/23   | List Meitner     |
 
-    @maleScientists
+
     Examples: Famous male scientists
       | productType | quantity | customerName | street        | city   | state   | zip   | cardType         | cardNumber   | cardExp | expectedName |
       | MoneyCog    | 4        | Einstein     | London Street | London | England | 34567 | Visa             | 112233445566 | 12/27   | Einstein     |
