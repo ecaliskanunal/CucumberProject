@@ -31,8 +31,8 @@ public class OrderStepDefinitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("webTablesURL"));
         webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
-//        Actions actions = new Actions(Driver.getDriver());
-//        actions.doubleClick(basePage.order).perform();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(basePage.order).perform();
 
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", basePage.order);
