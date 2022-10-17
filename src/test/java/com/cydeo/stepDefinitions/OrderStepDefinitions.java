@@ -16,6 +16,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import java.util.List;
 
@@ -37,6 +38,8 @@ public class OrderStepDefinitions {
 
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", basePage.order);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
+
         basePage.order.click();
 
 
