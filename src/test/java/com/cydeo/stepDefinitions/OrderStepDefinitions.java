@@ -29,6 +29,8 @@ public class OrderStepDefinitions {
 
     @Given("user is on the order page")
     public void user_is_on_the_order_page() {
+
+
         Driver.getDriver().get(ConfigurationReader.getProperty("webTablesURL"));
         webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
@@ -45,12 +47,14 @@ public class OrderStepDefinitions {
 
         //clicking the order link
         //basePage.order.click();
+        System.out.println("user is on the order page = " + "user is on the order page");
     }
 
     @When("user selects product type {string}")
     public void user_selects_product_type(String string) {
         Select select = new Select(orderPage.productDropdown);
         select.selectByVisibleText(string);
+        System.out.println("user selects product type {string} = " + "user selects product type {string}");
     }
 
     @When("user enters quantity {string}")
@@ -66,31 +70,38 @@ public class OrderStepDefinitions {
 //        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
 //        executor.executeScript("arguments[0].setAttribute('value', 'string')", orderPage.inputQuantity);
 
+        System.out.println("user enters quantity {string} = " + "user enters quantity {string}");
     }
 
     @When("user enters name {string}")
     public void user_enters_name(String string) {
         orderPage.inputName.sendKeys(string);
+        System.out.println("user enters name {string} = " + "user enters name {string}");
     }
 
     @When("user enters street {string}")
     public void user_enters_street(String string) {
         orderPage.inputStreet.sendKeys(string);
+        System.out.println("user enters street {string}");
     }
 
     @When("user enters city {string}")
     public void user_enters_city(String string) {
         orderPage.inputCity.sendKeys(string);
+        System.out.println("user enters city {string} = " + "user enters city {string}");
     }
+
 
     @When("user enters state {string}")
     public void user_enters_state(String string) {
         orderPage.inputState.sendKeys(string);
+        System.out.println("user enters state {string}");
     }
 
     @When("user enters zipcode {string}")
     public void user_enters_zipcode(String string) {
         orderPage.inputZip.sendKeys(string);
+        System.out.println("user enters zipcode {string}");
     }
 
     @When("user selects card {string}")
@@ -106,27 +117,90 @@ public class OrderStepDefinitions {
         //OR
 
         BrowserUtils.clickRadioButton(cardTypes, expectedCardType);
+        System.out.println("user selects card {string} = " + "user selects card {string}");
 
     }
 
     @When("user enters card number {string}")
     public void user_enters_card_number(String string) {
         orderPage.inputCardNo.sendKeys(string);
+        System.out.println("user enters card number {string}");
     }
 
     @When("user enters expiration date {string}")
     public void user_enters_expiration_date(String string) {
         orderPage.inputCardExp.sendKeys(string);
+        System.out.println("user enters expiration date {string}");
     }
 
     @When("user clicks process order button")
     public void user_clicks_process_order_button() {
         orderPage.processOrderButton.click();
+        System.out.println("user clicks process order button.");
     }
 
     @Then("user should see {string} in the first row of the web table")
     public void user_should_see_in_the_first_row_of_the_web_table(String expectedCustomerName) {
         String actualCustomerName = viewAllOrdersPage.newCustomerCell.getText();
         Assert.assertEquals(expectedCustomerName, actualCustomerName);
+        System.out.println("user should see {string} in the first row of the web table");
     }
+
+//
+//    @Given("user is on the order page")
+//    public void user_is_on_the_order_page() {
+//        System.out.println("My project working");
+//    }
+//    @When("user selects product type {string}")
+//    public void user_selects_product_type(String string) {
+//
+//    }
+//    @When("user enters quantity {string}")
+//    public void user_enters_quantity(String string) {
+//
+//    }
+//    @When("user enters name {string}")
+//    public void user_enters_name(String string) {
+//
+//    }
+//    @When("user enters street {string}")
+//    public void user_enters_street(String string) {
+//
+//    }
+//    @When("user enters city {string}")
+//    public void user_enters_city(String string) {
+//
+//
+//    }
+//    @When("user enters state {string}")
+//    public void user_enters_state(String string) {
+//
+//    }
+//    @When("user enters zipcode {string}")
+//    public void user_enters_zipcode(String string) {
+//
+//    }
+//    @When("user selects card {string}")
+//    public void user_selects_card(String string) {
+//
+//    }
+//    @When("user enters card number {string}")
+//    public void user_enters_card_number(String string) {
+//
+//    }
+//    @When("user enters expiration date {string}")
+//    public void user_enters_expiration_date(String string) {
+//
+//    }
+//    @When("user clicks process order button")
+//    public void user_clicks_process_order_button() {
+//
+//    }
+//    @Then("user should see {string} in the first row of the web table")
+//    public void user_should_see_in_the_first_row_of_the_web_table(String string) {
+//
+//    }
+
+
+
 }

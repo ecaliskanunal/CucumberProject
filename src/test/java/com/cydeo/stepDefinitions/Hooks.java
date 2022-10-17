@@ -14,8 +14,9 @@ import java.io.IOException;
 public class Hooks {
 
 
+
     //implement from io.cucumber.java not from j.unit, so annotations could come from Cucumber
-    //@Before(order = 1)
+    @Before(order = 1)
     public void setupScenario() {
         System.out.println("Setting up the browser using cucumber @Before");
     }
