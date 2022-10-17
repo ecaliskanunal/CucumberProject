@@ -38,7 +38,7 @@ public class OrderStepDefinitions {
 
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", basePage.order);
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
+        BrowserUtils.sleep(10);
 
         basePage.order.click();
 
