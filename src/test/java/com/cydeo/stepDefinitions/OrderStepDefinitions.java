@@ -32,6 +32,7 @@ public class OrderStepDefinitions {
         webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
         Actions actions = new Actions(Driver.getDriver());
+        actions.doubleClick(basePage.clickBeforeAll).perform();
         actions.moveToElement(basePage.order).perform();
 
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
@@ -56,8 +57,11 @@ public class OrderStepDefinitions {
         //orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
         //orderPage.quantity.sendKeys(string);
 
-        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
-        executor.executeScript("arguments[0].setAttribute('value', 'string')", orderPage.inputQuantity);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.click(orderPage.inputQuantity).sendKeys(Keys.BACK_SPACE).sendKeys(string).perform();
+
+//        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+//        executor.executeScript("arguments[0].setAttribute('value', 'string')", orderPage.inputQuantity);
 
     }
 
