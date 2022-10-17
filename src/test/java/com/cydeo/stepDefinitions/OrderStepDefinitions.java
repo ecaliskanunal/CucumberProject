@@ -30,13 +30,13 @@ public class OrderStepDefinitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("webTablesURL"));
         webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
-        //Actions actions = new Actions(Driver.getDriver());
+        Actions actions = new Actions(Driver.getDriver());
         //actions.click(basePage.clickBeforeAll);
-        //actions.doubleClick(basePage.order);
+        actions.doubleClick(basePage.order).perform();
 
 
         //clicking the order link
-        basePage.order.click();
+        //basePage.order.click();
     }
 
     @When("user selects product type {string}")

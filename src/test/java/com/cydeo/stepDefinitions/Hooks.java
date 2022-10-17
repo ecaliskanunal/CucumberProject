@@ -34,7 +34,7 @@ public class Hooks {
         //This info is kept in the Scenario class object.
         //Create an if condition: Take a screenshot only when the scenario fails
 
-        //scenario.isFailed() --> if scenraio fails, this method will return TRUE boolen value
+        //scenario.isFailed() --> if scenario fails, this method will return TRUE boolen value
         if(scenario.isFailed()){
             byte [] screenshot = ( (TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
