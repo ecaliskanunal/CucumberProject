@@ -4,16 +4,16 @@ Feature: Web table order feature
     Given user is on the order page
     When user selects product type "Familybea"
     And user enters quantity "2"
-    And user enters name "Sherlock Holmes"
-    And user enters street "221B Baker Street"
-    And user enters city "London"
-    And user enters state "England"
-    And user enters zipcode "50505"
-    And user selects card "MasterCard"
-    And user enters card number "111222333444"
-    And user enters expiration date "12/23"
-    And user clicks process order button
-    Then user should see "Sherlock Holmes" in the first row of the web table
+#    And user enters name "Sherlock Holmes"
+#    And user enters street "221B Baker Street"
+#    And user enters city "London"
+#    And user enters state "England"
+#    And user enters zipcode "50505"
+#    And user selects card "MasterCard"
+#    And user enters card number "111222333444"
+#    And user enters expiration date "12/23"
+#    And user clicks process order button
+#    Then user should see "Sherlock Holmes" in the first row of the web table
 
 
 #   Scenario Outline: User should be able to place order in the web table
