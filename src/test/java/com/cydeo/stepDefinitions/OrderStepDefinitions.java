@@ -58,7 +58,7 @@ public class OrderStepDefinitions {
         //orderPage.quantity.sendKeys(string);
 
         Actions actions = new Actions(Driver.getDriver());
-        actions.click(orderPage.inputQuantity).sendKeys(Keys.BACK_SPACE).sendKeys(string).perform();
+        actions.click(orderPage.quantity).sendKeys(Keys.BACK_SPACE).sendKeys(string).perform();
 
 //        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
 //        executor.executeScript("arguments[0].setAttribute('value', 'string')", orderPage.inputQuantity);
