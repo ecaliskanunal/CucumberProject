@@ -53,8 +53,12 @@ public class OrderStepDefinitions {
     public void user_enters_quantity(String string) {
 
         //back_space will clear the existing input int the box
-        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
-        orderPage.quantity.sendKeys(string);
+        //orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE); // more accurate than .clear()
+        //orderPage.quantity.sendKeys(string);
+
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        executor.executeScript("arguments[0].setAttribute('value', 'string')", orderPage.inputQuantity);
+
     }
 
     @When("user enters name {string}")
