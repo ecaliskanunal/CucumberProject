@@ -147,11 +147,12 @@ public class OrderStepDefinitions {
 //    }
 
 
-    
+
 
     @Given("user is on the order page")
     public void user_is_on_the_order_page() {
         System.out.println("My project working");
+        Driver.getDriver().get("https://www.youtube.com/watch?v=TyVFIdR84f8&list=PLsjUcU8CQXGHSC0g_pQu58YpxUfUryEnl&index=5&ab_channel=QAFox");
     }
     @When("user selects product type {string}")
     public void user_selects_product_type(String string) {
