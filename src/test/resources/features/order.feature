@@ -42,5 +42,5 @@ Feature: Web table order feature
     Examples: Famous male scientists
       | productType | quantity | customerName | street        | city   | state   | zip   | cardType         | cardNumber   | cardExp | expectedName |
       | MoneyCog    | 4        | Einstein     | London Street | London | England | 34567 | Visa             | 112233445566 | 12/27   | Einstein     |
-      | Screenable  | 5        | Newton       | Oxford Street | Oxford | England | 23455 | MasterCard       | 112233445566 | 10/27   | Newton       |
-      | Familybea   | 3        | Galileo      | Camb Street   | Camb   | England | 33337 | American Express | 112233445566 | 12/23   | Galileo      |
+#      | Screenable  | 5        | Newton       | Oxford Street | Oxford | England | 23455 | MasterCard       | 112233445566 | 10/27   | Newton       |
+#      | Familybea   | 3        | Galileo      | Camb Street   | Camb   | England | 33337 | American Express | 112233445566 | 12/23   | Galileo      |
