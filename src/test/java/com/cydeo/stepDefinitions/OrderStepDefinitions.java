@@ -39,7 +39,7 @@ public class OrderStepDefinitions {
         //BrowserUtils.sleep(10);
 
         Actions actions = new Actions(Driver.getDriver());
-        //actions.doubleClick(basePage.clickBeforeAll).perform();
+        actions.doubleClick(basePage.clickBeforeAll).perform();
         //actions.moveToElement(basePage.order).perform();
         actions.click(basePage.order).perform();
 
@@ -114,7 +114,7 @@ public class OrderStepDefinitions {
         actions.moveToElement(orderPage.inputCity).perform();
         actions.click(orderPage.inputCity).sendKeys(string).perform();
 
-        orderPage.inputCity.sendKeys(string);
+        //orderPage.inputCity.sendKeys(string);
     }
 
 
