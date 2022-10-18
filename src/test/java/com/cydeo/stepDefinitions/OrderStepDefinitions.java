@@ -54,6 +54,12 @@ public class OrderStepDefinitions {
 
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.productDropdown);
+
+        Actions actions = new Actions(Driver.getDriver());
+        //actions.doubleClick(basePage.clickBeforeAll).perform();
+        actions.moveToElement(orderPage.productDropdown).perform();
+        actions.click(orderPage.productDropdown).perform();
+
         Select select = new Select(orderPage.productDropdown);
         select.selectByVisibleText(string);
 
@@ -79,20 +85,35 @@ public class OrderStepDefinitions {
     public void user_enters_name(String string) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.inputName);
-        orderPage.inputName.sendKeys(string);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.inputName).perform();
+        actions.click(orderPage.inputName).sendKeys(string).perform();
+
+        //orderPage.inputName.sendKeys(string);
     }
 
     @When("user enters street {string}")
     public void user_enters_street(String string) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.inputStreet);
-        orderPage.inputStreet.sendKeys(string);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.inputStreet).perform();
+        actions.click(orderPage.inputStreet).sendKeys(string).perform();
+
+        //orderPage.inputStreet.sendKeys(string);
     }
 
     @When("user enters city {string}")
     public void user_enters_city(String string) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.inputCity);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.inputCity).perform();
+        actions.click(orderPage.inputCity).sendKeys(string).perform();
+
         orderPage.inputCity.sendKeys(string);
     }
 
@@ -101,14 +122,24 @@ public class OrderStepDefinitions {
     public void user_enters_state(String string) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.inputState);
-        orderPage.inputState.sendKeys(string);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.inputState).perform();
+        actions.click(orderPage.inputState).sendKeys(string).perform();
+
+        //orderPage.inputState.sendKeys(string);
     }
 
     @When("user enters zipcode {string}")
     public void user_enters_zipcode(String string) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.inputZip);
-        orderPage.inputZip.sendKeys(string);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.inputZip).perform();
+        actions.click(orderPage.inputZip).sendKeys(string).perform();
+
+        //orderPage.inputZip.sendKeys(string);
     }
 
     @When("user selects card {string}")
@@ -132,21 +163,36 @@ public class OrderStepDefinitions {
     public void user_enters_card_number(String string) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.inputCardNo);
-        orderPage.inputCardNo.sendKeys(string);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.inputCardNo).perform();
+        actions.click(orderPage.inputCardNo).sendKeys(string).perform();
+
+        //orderPage.inputCardNo.sendKeys(string);
     }
 
     @When("user enters expiration date {string}")
     public void user_enters_expiration_date(String string) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.inputCardExp);
-        orderPage.inputCardExp.sendKeys(string);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.inputCardExp).perform();
+        actions.click(orderPage.inputCardExp).sendKeys(string).perform();
+
+        //orderPage.inputCardExp.sendKeys(string);
     }
 
     @When("user clicks process order button")
     public void user_clicks_process_order_button() {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", orderPage.processOrderButton);
-        orderPage.processOrderButton.click();
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(orderPage.processOrderButton).perform();
+        actions.click(orderPage.processOrderButton).perform();
+
+        //orderPage.processOrderButton.click();
     }
 
     @Then("user should see {string} in the first row of the web table")
