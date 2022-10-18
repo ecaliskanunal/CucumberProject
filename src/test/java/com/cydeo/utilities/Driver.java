@@ -42,7 +42,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup(); // we are using bonigarcia dependency here, in companies this may change
                     //driver = new ChromeDriver(); Instead of this
                     driverPool.set(new ChromeDriver());
-                    //driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
                 case "firefox":         //If the browser type is Firefox
