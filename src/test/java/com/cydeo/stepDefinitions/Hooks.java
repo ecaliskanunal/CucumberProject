@@ -16,7 +16,7 @@ public class Hooks {
 
 
     //implement from io.cucumber.java not from j.unit, so annotations could come from Cucumber
-    @Before(order = 1)
+    //@Before(order = 1)
     public void setupScenario() {
         System.out.println("Setting up the browser using cucumber @Before");
     }
@@ -54,7 +54,6 @@ public class Hooks {
 //            File file = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.FILE);
 //            FileHandler.copy(file, new File("ScreenShot" + "screenShot" + i + ".png"));
 //            i++;
-
         }
 
         //BrowserUtils.sleep(3);
