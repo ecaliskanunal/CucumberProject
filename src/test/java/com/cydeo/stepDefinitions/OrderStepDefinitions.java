@@ -27,28 +27,28 @@ public class OrderStepDefinitions {
 
     ViewAllOrdersPage viewAllOrdersPage = new ViewAllOrdersPage();
 
-//    @Given("user is on the order page")
-//    public void user_is_on_the_order_page() {
-//
-//
-//        Driver.getDriver().get(ConfigurationReader.getProperty("webTablesURL"));
-//        webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
-//
-////        Actions actions = new Actions(Driver.getDriver());
-////        actions.doubleClick(basePage.clickBeforeAll).perform();
-////        actions.moveToElement(basePage.order).perform();
-//
-//        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
-//        executor.executeScript("arguments[0].scrollIntoView(true);", basePage.order);
-//        BrowserUtils.sleep(10);
-//
-//        basePage.order.click();
-//
-//
-//        //clicking the order link
-//        //basePage.order.click();
-//        System.out.println("user is on the order page = " + "user is on the order page");
-//    }
+    @Given("user is on the order page")
+    public void user_is_on_the_order_page() {
+
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("webTablesURL"));
+        webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
+
+//        Actions actions = new Actions(Driver.getDriver());
+//        actions.doubleClick(basePage.clickBeforeAll).perform();
+//        actions.moveToElement(basePage.order).perform();
+
+       // JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+       // executor.executeScript("arguments[0].scrollIntoView(true);", basePage.order);
+        BrowserUtils.sleep(10);
+
+        basePage.order.click();
+
+
+        //clicking the order link
+        //basePage.order.click();
+        System.out.println("user is on the order page = " + "user is on the order page");
+    }
 //
 //    @When("user selects product type {string}")
 //    public void user_selects_product_type(String string) {
@@ -149,11 +149,7 @@ public class OrderStepDefinitions {
 
 
 
-    @Given("user is on the order page")
-    public void user_is_on_the_order_page() {
-        System.out.println("My project working");
-        Driver.getDriver().get("https://www.youtube.com/watch?v=TyVFIdR84f8&list=PLsjUcU8CQXGHSC0g_pQu58YpxUfUryEnl&index=5&ab_channel=QAFox");
-    }
+
     @When("user selects product type {string}")
     public void user_selects_product_type(String string) {
 
