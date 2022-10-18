@@ -64,13 +64,6 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>
 
 
         <!--https://github.com/DiUS/java-faker-->
@@ -87,7 +80,6 @@
             <version>7.2.3</version>
         </dependency>
 
-
         <!--        -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -95,7 +87,6 @@
             <version>7.2.3</version>
             <scope>test</scope>
         </dependency>
-
 
         <!-- If you want to get rid of SLF4J Failed to load message from the console-->
         <dependency>
