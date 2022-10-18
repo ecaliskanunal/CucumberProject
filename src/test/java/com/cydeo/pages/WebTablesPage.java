@@ -14,7 +14,7 @@ public class WebTablesPage {
     @FindBy (xpath = "//form/div/input[@name='username']")
     public WebElement inputUsername;
 
-    @FindBy (xpath = "//input[@name='password']")
+    @FindBy (css = "input[name='password']")
     public WebElement inputPassword;
 
     @FindBy (xpath = "//button[.='Login']")
@@ -22,9 +22,9 @@ public class WebTablesPage {
 
     // No parameters, but when we call this method, it will directly login using the right credentials
     public void login(){
-        getInputUsername().sendKeys("Test");
-        getInputPassword().sendKeys("Tester");
-        getLoginButton().click();
+        this.inputUsername.sendKeys("Test");
+        this.inputPassword.sendKeys("Tester");
+        this.loginButton.click();
     }
 
     //This method accepts two arguments and logins
