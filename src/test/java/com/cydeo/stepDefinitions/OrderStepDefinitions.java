@@ -34,17 +34,17 @@ public class OrderStepDefinitions {
         webTablesPage.loginButton.click();
         //webTablesPage.login(); //this method passes Test and tester as credentials, here we call the method to log in to the app
 
-        //Actions actions = new Actions(Driver.getDriver());
-        //actions.doubleClick(basePage.clickBeforeAll).perform();
-        //actions.moveToElement(basePage.order).perform();
-        //actions.click(basePage.order).perform();
-
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
         executor.executeScript("arguments[0].scrollIntoView(true);", basePage.order);
         //BrowserUtils.sleep(10);
 
+        Actions actions = new Actions(Driver.getDriver());
+        //actions.doubleClick(basePage.clickBeforeAll).perform();
+        //actions.moveToElement(basePage.order).perform();
+        actions.click(basePage.order).perform();
+
         //clicking the order link
-        basePage.order.click();
+        //basePage.order.click();
 
 
     }
