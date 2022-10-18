@@ -22,9 +22,9 @@ public class WebTablesPage {
 
     // No parameters, but when we call this method, it will directly login using the right credentials
     public void login(){
-        this.inputUsername.sendKeys("Test");
-        this.inputPassword.sendKeys("Tester");
-        this.loginButton.click();
+        getInputUsername().sendKeys("Test");
+        getInputPassword().sendKeys("Tester");
+        getLoginButton().click();
     }
 
     //This method accepts two arguments and logins
