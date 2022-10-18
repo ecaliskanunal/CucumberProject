@@ -22,7 +22,7 @@ public class BasePage {
     @FindBy (xpath = "//*[@id='root']/nav/div[2]")
     public WebElement clickBeforeAll;
 
-    @FindBy (xpath = "//*[@id='root']//a[3]/button")
+    @FindBy (css = "#root > nav > div.nav__items__wrap > a:nth-child(3) > button")
     public WebElement order;
 
     @FindBy (xpath = "//button[.='Logout']")
