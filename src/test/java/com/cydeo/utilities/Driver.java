@@ -1,6 +1,7 @@
 package com.cydeo.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -41,9 +42,12 @@ public class Driver {
                 case "chrome":          //If the browser type is Chrome
                     WebDriverManager.chromedriver().setup(); // we are using bonigarcia dependency here, in companies this may change
                     //driver = new ChromeDriver(); Instead of this
-                    driverPool.set(new ChromeDriver());
+                    ChromeOptions options=new ChromeOptions();
+                    options.addArguments("--headless");
+                    driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    driverPool.get().manage().window().setSize(new Dimension(1500, 1500));
                     break;
                 case "firefox":         //If the browser type is Firefox
                     WebDriverManager.firefoxdriver().setup();

@@ -38,13 +38,12 @@ public class OrderStepDefinitions {
         executor.executeScript("arguments[0].scrollIntoView(true);", basePage.order);
         //BrowserUtils.sleep(10);
 
-        Actions actions = new Actions(Driver.getDriver());
-        actions.doubleClick(basePage.clickBeforeAll).perform();
-        //actions.moveToElement(basePage.order).perform();
-        actions.click(basePage.order).perform();
+//        Actions actions = new Actions(Driver.getDriver());
+//        //actions.moveToElement(basePage.order).perform();
+//        actions.click(basePage.order).perform();
 
         //clicking the order link
-        //basePage.order.click();
+        basePage.order.click();
 
 
     }
