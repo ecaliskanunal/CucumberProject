@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/stepDefinitions",
         dryRun = false,
-        tags = "@wipp"
+        tags = ""
 )
 public class CukesRunner { //is pointing to regular feature files
 }

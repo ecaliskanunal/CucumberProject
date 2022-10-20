@@ -6,13 +6,13 @@ Feature: Google search functionality
     Then user should see the title is Google
 
 
-  Scenario: Search functionality result title
-    Given user is on the Google search page
-    When user types apple and clicks enter
-    Then user sees apple in the title
+#  Scenario: Search functionality result title
+#    Given user is on the Google search page
+#    When user types apple and clicks enter
+#    Then user sees apple in the title
 
 
   Scenario: Search functionality result title
     Given user is on the Google search page
-    When user types "apple" and clicks enter
-    Then user sees "apple" in the title
+    When user types "<apple>" and clicks enter
+    Then user sees "<apple>" in the title

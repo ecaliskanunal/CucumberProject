@@ -11,7 +11,7 @@ public class WebTablesPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "//input[@name='username']")
+    @FindBy (css = "input[name='username']")
     public WebElement inputUsername;
 
     @FindBy (css = "input[name='password']")
